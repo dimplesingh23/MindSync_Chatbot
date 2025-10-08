@@ -16,6 +16,13 @@ SAFETY_MESSAGE =(
     "You Matter. 🫀"                   
 )
 
+
 def contains_crisis_keywords(text: str) -> bool:
     text_lower = text.lower()
-    return any(keyword in text_lower for keyword in CRISIS_KEYWORDS)
+    result = any(keyword in text_lower for keyword in CRISIS_KEYWORDS)
+    return result
+
+# Now call the function and print the result
+output = contains_crisis_keywords("This is a crisis situation")
+print(output)
+
